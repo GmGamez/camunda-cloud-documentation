@@ -10,7 +10,7 @@ stops at this point and waits until the job is completed.
 
 ![user-task](assets/user-task.png)
 
-Applications like [Tasklist] can be used by humans to complete these tasks.
+Applications like [Tasklist](/components/tasklist/introduction.md) can be used by humans to complete these tasks.
 
 Alternatively, a job worker can subscribe to the job type
 `io.camunda.zeebe:userTask` to complete the job manually.
@@ -22,7 +22,7 @@ instance continues.
 
 User tasks support specifying a `formKey` attribute, using the
 `zeebe:formDefinition` extension element. The form key can be used to specify
-an identifier to associate a form to the user task. [Tasklist] supports
+an identifier to associate a form to the user task. [Tasklist](/components/tasklist/introduction.md) supports
 embedded [Camunda Forms](../../../../components/tasklist/userguide/user-interface/camunda-forms),
 these can be embedded into the BPMN process XML as a `zeebe:UserTaskForm`
 extension element of the process element.
@@ -31,7 +31,7 @@ extension element of the process element.
 User tasks support specifying assignments, using the `zeebe:AssignmentDefinition` extension element.
 This can be used to define which user the task can be assigned to. One or both of the following
 attributes can be specified simultaneously:
-- `assignee`: Specifies the user assigned to the task. [Tasklist] will claim the task for this user.
+- `assignee`: Specifies the user assigned to the task. [Tasklist](/components/tasklist/introduction.md) will claim the task for this user.
 - `candidateGroups`: Specifies the groups of users that the task can be assigned to.
 
 Typically, the assignee and candidate groups are defined as static values (e.g. `some_username` and
